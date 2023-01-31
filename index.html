@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Watch</title>
+<link rel="stylesheet" href="style.css">
+<script src="index.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Stop Watch</h1>
+         <div id="time" >
+          00:00:00
+        </div>
+        <div id="buttons">
+        <button onclick="startTimer()">Start</button>
+        <button onclick="stopTimer()">Stop</button>
+        <button onclick="resetTimer()">Reset</button>
+    </div>
+    </div>
+</body>
+<script>
+    let display= document.getElementById('time')
+let button=document.querySelectorAll('button')
+
+let hr=0;
+let min=0;
+let sec=0;
+let interval;
+ 
+function formatNumber(digit){
+  if(digit <10){
+  return('0' + digit)
+}else{
+   return digit; 
+}
+}
+
+
+ function startTimer(){
+interval =setInterval(watch,1000)
+ }
+
+ function stopTimer(){
+        
+     clearInterval(interval);
+}
+function resetTimer(){
+    clearInterval(interval);
+    sec=0
+    min=0
+    hr=0
+    display.innerHTML="00:00:00"
+}
+
+function watch(){
+    sec++
+    if(sec == 60){
+        min++
+        sec=0
+        if(min == 60){
+            min=00;
+            hr++
+        }    
+    }
+// console.log(elements);
+ 
+display.innerHTML = `${formatNumber (hr)}:${formatNumber (min)}:${formatNumber (sec)}`
+
+}
+
+
+
+
+
+</script>
+</html>

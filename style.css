@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    
+    background:linear-gradient(to right, #6659e4,#574acc, rgb(100, 100, 245));
+}
+.container{
+    /* margin: 150px;
+    padding: 35px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    flex-direction: column;
+}
+h1{
+    
+        font-size: 73px;
+        color: white;
+        font-family: 'Lobster', cursive;
+    
+}
+
+#time{
+    font-size: 68px;
+    color: white;
+    font-family: 'Rancho', cursive;
+    border-radius:10px;
+    padding: 20px 63px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 10px black;
+}
+button{
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    border: none;
+    /* background-color: blue; */
+    background:linear-gradient( rgb(97, 97, 221), blue);
+    border-radius: 10px;
+    margin: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 8px black;
+    
+    
+}
+button:hover{
+cursor: pointer;
+}
+button:active{
+    box-shadow: none;
+    transition: all 0.5;
+
+}
